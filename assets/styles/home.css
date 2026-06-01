@@ -1,5 +1,4 @@
 * {
-    font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -12,7 +11,7 @@ body {
 header div {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
     height: 100px;
 }
@@ -47,12 +46,12 @@ main {
     display: flex;
     justify-content: end;
     align-items: center;
+    overflow: hidden;
 
     background-color: rgb(109, 115, 104);
     box-shadow: 4px 4px 10px;
-    font-family: 'Inter', Helvetica, Arial, sans-serif;
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-family: 'Digital-7', sans-serif;
+    font-size: 1.8rem;
 
     margin-top: 30px;
     height: 80px;
@@ -60,6 +59,7 @@ main {
     border-radius: 30px;
 
 }
+
 
 .container-btn {
     display: grid;
@@ -105,7 +105,7 @@ button:hover {
 }
 
 #resultado:hover {
-    background-color: rgba(3, 158, 143, 0.679);
+    background-color: rgba(67, 200, 98, 0.679);
 
 }
 
@@ -113,7 +113,10 @@ button:hover {
     background-color: rgba(255, 127, 80, 0.716);
 }
 
+#apagar2:hover {
+    background-color: rgba(255, 127, 80, 0.716);
+}
+
 #resultado {
     background-color: transparent;
-    grid-column: span 2;
 }

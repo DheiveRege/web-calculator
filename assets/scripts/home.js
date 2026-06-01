@@ -4,6 +4,7 @@ const painel = document.querySelector("h2");
 
 //sinais
 const apagar = document.getElementById("apagar");
+const apagar2 = document.getElementById("apagar2");
 const raiz = document.getElementById("raiz");
 const soma = document.getElementById("soma");
 const menos = document.getElementById("menos");
@@ -13,23 +14,15 @@ const ponto = document.getElementById("ponto");
 const resultado = document.getElementById("resultado");
 
 //numeros
-const zero = document.getElementById("0");
-const um = document.getElementById("1");
-const dois = document.getElementById("2");
-const tres = document.getElementById("3");
-const quatro = document.getElementById("4");
-const cinco = document.getElementById("5");
-const seis = document.getElementById("6");
-const sete = document.getElementById("7");
-const oito = document.getElementById("8");
-const nove = document.getElementById("9");
 const btn_numeros = document.querySelectorAll(".btn-numbers");
 const btn_numeros2 = document.querySelectorAll(".btn-numbers2");
 
 
 btn_numeros.forEach(botao => {
-
     botao.addEventListener("click", () => {
+        if (painel.innerHTML == "NaN" || !painel.innerHTML == "Infinity") {
+            painel.innerHTML = ``;
+        }
 
         painel.innerHTML += botao.innerHTML
     })
@@ -37,7 +30,9 @@ btn_numeros.forEach(botao => {
 
 btn_numeros2.forEach(botao => {
     botao.addEventListener("click", () => {
-
+        if (painel.innerHTML == "NaN" || !painel.innerHTML == "Infinity") {
+            painel.innerHTML = ``;
+        }
         painel.innerHTML += botao.innerHTML
     })
 });
@@ -46,10 +41,18 @@ apagar.addEventListener("click", () => {
     painel.innerHTML = painel.innerHTML.slice(0, -1);
 });
 
+apagar2.addEventListener("click", () => {
+    painel.innerHTML = ``;
+});
+
 resultado.addEventListener("click", () => {
     conta = painel.innerHTML;
     let number;
     let number2;
+
+    if (painel.innerHTML == "NaN" || !painel.innerHTML == "Infinity") {
+        painel.innerHTML = ``;
+    }
 
     if (conta.includes("+")) {
 
